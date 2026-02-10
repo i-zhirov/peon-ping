@@ -293,13 +293,11 @@ a:hover { text-decoration: underline; }
 
 /* --- Terminal animation --- */
 .terminal-wrap {
-  border: 20px solid transparent;
-  border-image-source: url('textures/card-bg.webp');
-  border-image-slice: 24;
-  border-image-repeat: stretch;
-  border-radius: 0;
   background: #1a1b26;
+  border: 1px solid rgba(255,171,1,0.2);
+  border-radius: 10px;
   overflow: hidden;
+  box-shadow: 0 0 40px rgba(0,0,0,0.5);
 }
 .terminal-bar {
   display: flex;
@@ -411,7 +409,6 @@ footer a:hover { color: #ffab01; }
     grid-column: 1 / -1;
   }
   .feature-card { border-width: 10px; }
-  .terminal-wrap { border-width: 14px; }
   .install-block { font-size: 0.75rem; padding: 10px 12px; border-width: 4px; }
   .atmosphere-orb { width: 600px; height: 600px; }
 }
