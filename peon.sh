@@ -1028,6 +1028,15 @@ for i, s in enumerate(sounds):
       fi
     done
     exit 0 ;;
+  update)
+    echo "Updating peon-ping..."
+    INSTALL_SCRIPT="$PEON_DIR/install.sh"
+    if [ -f "$INSTALL_SCRIPT" ]; then
+      bash "$INSTALL_SCRIPT"
+    else
+      curl -fsSL https://raw.githubusercontent.com/PeonPing/peon-ping/main/install.sh | bash
+    fi
+    exit $? ;;
   help|--help|-h)
     cat <<'HELPEOF'
 Usage: peon <command>
@@ -1043,6 +1052,7 @@ Commands:
   preview --list       List all categories and sound counts in the active pack
                        Categories: session.start, task.acknowledge, task.complete,
                        task.error, input.required, resource.limit, user.spam
+  update               Update peon-ping and refresh all sound packs
   help                 Show this help
 
 Pack management:
