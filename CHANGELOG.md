@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.8.1 (2026-02-13)
+
+### Fixed
+- Eliminate test race conditions: `peon.sh` runs afplay synchronously in test mode instead of relying on sleep ([#134](https://github.com/PeonPing/peon-ping/pull/134))
+- Local uninstall now cleans hooks from global `settings.json` ([#134](https://github.com/PeonPing/peon-ping/pull/134))
+- Background sound playback and notifications on WSL/Linux to avoid blocking the IDE ([#132](https://github.com/PeonPing/peon-ping/pull/132))
+
 ## v1.8.0 (2026-02-13)
 
 ### Added
